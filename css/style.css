@@ -1522,7 +1522,7 @@ a:focus {
 .why-choose-block::before {
   position: absolute;
   content: "";
-  background: url(../images/why-choose-bg-left.png) no-repeat #5bc198;
+  background: url(../images/why-choose-bg-right.png) no-repeat #5bc198;
   background-size: cover;
   top: 0;
   left: 0;
