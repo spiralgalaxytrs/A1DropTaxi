@@ -76,7 +76,12 @@
 
     });
   }
+ var script = document.createElement('script');
+          
 script.src = "js/main.js";
+          
+document.head.appendChild(script)
+
    var strText = document.getElementById("name").value;
         var strText1 = document.getElementById("p").value;
         var strText2 = document.getElementById("location-1").value;
