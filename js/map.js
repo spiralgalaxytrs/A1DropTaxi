@@ -4,10 +4,6 @@ var mapOptions = {
     zoom: 1,
     mapTypeId: google.maps.MapTypeId.ROADMAP
 };
-
-// Hide result box
-//document.getElementById("output").style.display = "none";
-//document.getElementById("output1").style.display = "block";
 // Create/Init map
 var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
 
@@ -20,9 +16,9 @@ var directionsDisplay = new google.maps.DirectionsRenderer();
 // Bind the DirectionsRenderer to the map
 directionsDisplay.setMap(map);
 
+
 // Define calcRoute function
 function calcRoute() {
-     
     //create request
     var request = {
         origin: document.getElementById("location-1").value,
@@ -36,22 +32,10 @@ function calcRoute() {
         if (status == google.maps.DirectionsStatus.OK) {
 
             //Get distance and time            
-            var d=result.routes[0].legs[0].distance.value/1000;
-            var n = d.toFixed(0);
-            sedano=((n*12)+350)+" - "+((n*12)+500);
-            sedanr=2*((n*12)+350)+" - "+2*((n*12)+500);
-            suvo=((n*16)+350)+" - "+((n*16)+500);
-            suvr=2*((n*16)+350)+" - "+2*((n*16)+500);
-            traveller=(2*((n*18)+350))+" - "+(2*((n*18)+500));
-           
-          //  $("#output").html("<div class='result-table'> Driving distance: " + result.routes[0].legs[0].distance.text + ".<br />SUV Rate: ₹" +((n)*12)+"-"+((n)*15)+".<br />Sedan Rate: ₹" +((n)*8)+"-"+((n)*11)+".<br />Hatchback Rate: ₹" +((n)*16)+"-"+((n)*19)+ ".<br />Duration: " + result.routes[0].legs[0].duration.text + ".</div>");
-            //document.getElementById("output").style.display = "block";
-            //display route <span> Price  :  ₹13 / Km.</span>
-            directionsDisplay.setDirections(result);
             
 
-
-
+            //display route
+            directionsDisplay.setDirections(result);
         } else {
             //delete route from map
             directionsDisplay.setDirections({ routes: [] });
@@ -80,12 +64,12 @@ function clearRoute(){
 // Create autocomplete objects for all inputs
 
 var options = {
-    types: ['(india)']
+    types: ['(cities)']
 }
 
 
 var input1 = document.getElementById("location-1");
-var autocomplete1 = new google.maps.places.Autocomplete(input1);
+var autocomplete1 = new google.maps.places.Autocomplete(input1, options);
 
 var input2 = document.getElementById("location-2");
-var autocomplete2 = new google.maps.places.Autocomplete(input2);
+var autocomplete2 = new google.maps.places.Autocomplete(input2, options);
