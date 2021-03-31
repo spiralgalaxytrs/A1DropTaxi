@@ -33,7 +33,6 @@
     var cars = getInputVal('cars');
     var ser = getInputVal('ser');
     var date = getInputVal('pickupdate');
-    var b=getInputVal('b')
   
   
     // Save message
