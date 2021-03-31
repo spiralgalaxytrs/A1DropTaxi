@@ -403,7 +403,7 @@
 		    var res = r.replaceAll('%2C',',');
     var res1 = res.replaceAll('+',' ');
   document.getElementById("location-1").value = res1.substring(res1.indexOf("=")+1,res1.indexOf("&"));
-  document.getElementById("location-2").value = res1.substring(res1.indexOf("on=")+1,res1.length);
+  document.getElementById("location-2").value = res1.substring(res1.indexOf("on=")+3,res1.length);
 </script>
 <script>
     function testVariable() {
