@@ -155,20 +155,20 @@
                 <div class="col-md-12">
                     <!-- booking form -->
                     <ul class="booking-form">
-                        <li><input type="text" class="form-control" placeholder="Enter Your Name" /><i
-                                class="fas fa-user"></i></li>
-                        <li><input type="text" class="form-control" placeholder="Select Your Location" /><i
+                        <li><input type="text" class="form-control" name="origin" id="location-1" placeholder="Pickup Location" required/><i
                                 class="fas fa-map-marker-alt"></i></li>
-                        <li>
+                        <li><input type="text" class="form-control" id="location-2" name="destination" placeholder="Drop Location" required/><i
+                                class="fas fa-map-marker-alt"></i></li>
+                        <!--li>
                             <select class="custom-select form-control">
                                 <option selected>Select a Service</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
                             </select>
-                        </li>
+                        </li-->
                         <li class="form-btn">
-                            <a href="#" class="btn btn-success">BOOK NOW</a>
+                            <a onclick="calcRoute();" class="btn btn-success">BOOK NOW</a>
                         </li>
                     </ul>
                     <!--//End booking form -->
@@ -667,6 +667,11 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <!-- Script Js -->
     <script src="js/script.js"></script>
+                
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNKpr4auBLgBgiOXJ41UUWTB58MZa6p3E&libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
