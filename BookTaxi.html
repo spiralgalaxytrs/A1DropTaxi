@@ -400,8 +400,10 @@
 
 	<script>
     var r=window.location.search;
-  document.getElementById("location-1").value = r.substring(r.indexOf("=")+1,r.indexOf("&"));
-  document.getElementById("location-2").value = r.substring(r.indexOf("1=")+2,r.length);
+		    var res = r.replaceAll('%2C',',');
+    var res1 = res.replaceAll('+',' ');
+  document.getElementById("location-1").value = res1.substring(res1.indexOf("=")+1,res1.indexOf("&"));
+  document.getElementById("location-2").value = res1.substring(res1.indexOf("on=")+2,res1.length);
 </script>
 <script>
     function testVariable() {
