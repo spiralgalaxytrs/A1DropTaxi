@@ -36,7 +36,7 @@
   
   
     // Save message
-    saveMessage(name, phone, pickuplocation,  pickuptime, droplocation, cars,ser,date,b);
+    saveMessage(name, phone, pickuplocation,  pickuptime, droplocation, cars,ser,date);
   
     // Show alert
     document.querySelector('.alert').style.display = 'block';
@@ -60,7 +60,7 @@
   }
   
   // Save message to firebase
-  function saveMessage(name, phone, pickuplocation,  pickuptime, droplocation, cars,ser,date,b){
+  function saveMessage(name, phone, pickuplocation,  pickuptime, droplocation, cars,ser,date){
     var newMessageRef = messagesRef.push();
     newMessageRef.set({
       name: name,
@@ -70,8 +70,7 @@
       droplocation:droplocation,
       cars:cars,
       ser:ser,
-      date:date,
-      b:b
+      date:date
 
     });
   }
