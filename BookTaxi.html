@@ -126,7 +126,7 @@
                                 <div class="clearfix"></div><!-- /.clearfix -->
                              <div class="col-md-6">
                                 <center>  
-                                    <input type="submit" class="btn btn-success" value="Check Price"  onclick="calcRoute();">
+                                    <input type="submit" class="btn btn-success" value="Rate"  onclick="calcRoute();">
                                 </center> 
                                           
                                 </div>
@@ -134,10 +134,10 @@
                                <br><br>
                                 
                                 
-                                <div>  
+                                <div id="ma" style="display: none;">  
                                 <b> <div id="output" class="result-table"></div></b>
                                 <div class="container-map" id="google-map"></div> 
-<br><br>
+
                                <div class="col-md-6">
                                 <div class="service-thumbnail d-flex flex-fill">
                                 <img src="img/sedan.png" alt="#" style="height: 100px; width: 100px; ">
@@ -148,7 +148,7 @@
                                 
                                  <div class="col-md-6">
                                 <div class="service-thumbnail d-flex flex-fill">
-                                <img src="img/suv.png" alt="#" style="height: 100px; width: 100px; ">
+                                <img src="img/sedan.png" alt="#" style="height: 100px; width: 100px; ">
                                 <div id="output2" class="meta-item">
                             </div>
                         </div>
@@ -158,7 +158,7 @@
             
                                 <div class="col-md-6">
                                 <div class="service-thumbnail d-flex flex-fill">
-                                <img src="img/van.png" alt="#" style="height: 100px; width: 100px; ">
+                                <img src="img/sedan.png" alt="#" style="height: 100px; width: 100px; ">
                                 <div id="output3" class="meta-item">
                             </div>
                         </div>
@@ -174,7 +174,7 @@
                                         <label style="color: black;">Name</label>
                                          <div class="form-group">
                                             <!--i class="fa fa-map-marker"></i-->
-                                            <input type="text"   placeholder="Your Name"  id="name"  class="form-control">
+                                            <input type="text" required placeholder="Your Name"  id="name"  class="form-control">
                                         </div><!--/.input-->
                                     </div><!--/.col-md-6-->
                                     
@@ -182,7 +182,7 @@
                                         <label style="color: black;">Phone Number</label>
                                      <div class="form-group">
                                             <!--i class="fa fa-calendar"></i-->
-                                            <input type="tel"   placeholder="Phone Number" placeholder="Your Number"id="p" pattern="[6-9]{1}[0-9]{9}" title="Enter Valid Phone Number" class="form-control">          
+                                            <input type="tel" required placeholder="Phone Number" placeholder="Your Number"id="p" pattern="[6-9]{1}[0-9]{9}" title="Enter Valid Phone Number" class="form-control">          
                                     </div><!--/.col-md-6-->
                                 </div>
                                 <div class="clearfix"></div>
@@ -212,14 +212,14 @@
                                     <label style="color: black;">Pick up Date</label>
                                      <div class="form-group">
                                         <!--i class="fa fa-map-marker"></i-->
-                                        <input type="date"  placeholder="01/01/2020"  id="pickupdate"  class="form-control">
+                                        <input type="date" required placeholder="01/01/2020"  id="pickupdate"  class="form-control">
                                     </div><!--/.input-->
                                 </div><!--/.col-md-6-->
                                 <div class="col-md-6">
                                     <label style="color: black;">Pick up Time</label>
                                      <div class="form-group">
                                         <!--i class="fa fa-map-marker"></i-->
-                                        <input type="time"  placeholder="9:00AM"  id="pickuptime"  class="form-control">
+                                        <input type="time" required placeholder="9:00AM"  id="pickuptime"  class="form-control">
                                         <!--input type="text" placeholder="Pickup Time" class="time-selector form-controller" placeholder="15:00 am" id="pickuptime"-->
                                     </div><!--/.input-->
                                 </div>
@@ -233,14 +233,14 @@
                         
                         <div class="clearfix"></div><!-- /.clearfix -->
                         <center><div class="col-md-6">
-                            <div class="row">                            
+                            <div class="row" id="ma1" style="display: none;">                            
                                 <!--div class="advanced-search">
                                     <a href="#" class="advanced-search-btn"><i class="fa fa-search"></i>Advanced search</a>
                                 </div-->
                                         <input type="submit" class="btn btn-success" value="Find car"  onclick="testVariable()">
                                         
                             </div><!-- /.row -->
-                        </div></div></center><!-- /.check-vehicle-footer -->
+                        </div></div></center><!-- /.check-vehiclefas-footer -->
                     </form><!-- /.advance_search_query -->
                 </div>
             </div>
@@ -255,12 +255,13 @@
   document.getElementById("location-2").value = res1.substring(res1.indexOf("on=")+3,res1.length);
 </script>
 <script>
-    function hd(){
-        var y = document.getElementById("ma");
-        y.style.display = "block";}
+
 </script>
 
-<script src="js/fast2.js"></script>
+
+<script src="https://a1droptaxi.com/js/7.13.1/firebase.js"></script>
+<script src="book.js"></script>
+<script src="https://a1droptaxi.com/js/fast2.js"></script>
 </section>
 
 
