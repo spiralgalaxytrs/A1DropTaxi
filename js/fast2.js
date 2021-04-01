@@ -1,4 +1,4 @@
-function testVariable() {
+
     var strText = document.getElementById("name").value;
     var strText1 = document.getElementById("p").value;
     var strText2 = document.getElementById("location-1").value;
@@ -18,7 +18,9 @@ function testVariable() {
     {rate=suvr;}
     else if(strText7=="Traveller")
     {rate=traveller;}
+
     var result = 'Customer Name:  ' + strText + '%0APhone Number: ' + strText1 +'%0APickup Location: ' + strText2+  '%0ADrop Location: ' + strText3 + '%0APickup Date: ' + strText4 + '%0APickup Time: ' + strText6 +'%0AService: ' + strText8 + '%0ACars: ' + strText7+"%0APrice:"+rate;
+function testVariable() {
     var finalMsg = encodeURI(result);
     document.getElementById("bookingForm").addEventListener("submit", (e) => {
         e.preventDefault();
@@ -29,6 +31,10 @@ function testVariable() {
               var xhttp = new XMLHttpRequest();
          xhttp.open("GET", "https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=https://a1droptaxi.com%0AContact No: 8015918900%0AHello "+strText+",%0AThank you for Booking with A1 Drop Taxi.Your "+strText2+" Booking has been Confirmed on "+strText4+".&language=english&route=p&numbers="+strText1, true);        
          xhttp.send();
-         window.open('bc.html', '_blank');
+            tele();
+       //  window.open('bc.html', '_blank');
         }
     });}
+function testVariable() {
+    alert("hi");
+}
