@@ -24,7 +24,7 @@ function testVariable() {
 var finalMsg = encodeURI(result);
          document.getElementById("bookingForm").addEventListener("submit", (e) => {
 e.preventDefault();
-if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText5=="")
+if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6=="")
         {
         console.log('error');
         }else
