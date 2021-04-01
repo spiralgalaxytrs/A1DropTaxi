@@ -39,7 +39,7 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText6
                               if(wnd){
                                       setTimeout(function () { wnd.close();}, 1800);
                               }
-				}
+				
         }
 
 });
