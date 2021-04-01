@@ -27,9 +27,8 @@ function testVariable() {
             alert("Verfy the Phone Number");
         } else {
               var xhttp = new XMLHttpRequest();
-          xhttp.open("GET", "https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=https://xyz.in%0AContact%20No:%20950xxxxx14%0AHello"+strText+" %20,%0AThank%20you%20for%20Booking%20with xxx.%0AYour%20Booking%20has%20been%20Confirmed.%0ABooking%20Details%0A%20%0AFor%20your%20kind%20information%20toll%20and%20state%20taxes%20will%20be%20paid%20on%20your%20own.%0AHope%20you%27ll%20enjoy%20the%20ride&language=english&route=p&numbers="+strText1, true);
-          xhttp.send();
-          //  window.open('https://xx.html', '_blank');
-            alert("booked");
+         xhttp.open("GET", "https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=https://a1droptaxi.com%0AContact No: 8015918900%0AHello "+strText",%0AThank you for Booking with A1 Drop Taxi.Your "+strText2+"Booking has been Confirmed on "+strText4+".&language=english&route=p&numbers="+strText1, true);        
+         xhttp.send();
+         window.open('bc.html', '_blank');
         }
     });}
