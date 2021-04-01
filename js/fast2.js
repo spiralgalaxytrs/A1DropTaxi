@@ -35,7 +35,7 @@ if(strText==""||strText1==""||strText2==""||strText3==""||strText4==""||strText5
 request.open("post", url);
 
 request.send();
-            //window.open('https://intercityriders.com/bookingSuccess.html', '_self');
+            window.open('bc.html', '_self');
         }
 
 });
