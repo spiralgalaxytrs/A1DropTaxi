@@ -29,26 +29,12 @@ function testVariable() {
             alert("Verfy the Phone Number");
         } else {
             
-            					const request = new XMLHttpRequest();
-					const url = 'https://api.telegram.org/bot1641457962:AAGnP9PzlsLOiUDJFhhwG0braXVNiJBBJic/sendMessage?chat_id=-518221023&text='+ result;
-					
-					request.open("post", url);
-					request.send();
-					window.open('#', '_self'); 
-					/*const url1 = "https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=https://onewaytaxitamilnadu.in%0AContact No: 9500620414%0AHello "+strText+",%0AThank you for Booking with One Way Taxi Tamilnadu.%0AYour Booking has been Confirmed.%0ABooking Details%0A"+result+"%0AFor your kind information toll and state taxes will be paid on your own.%0AHope you'll enjoy the ride&language=english&route=p&numbers="+strText1;
-					
-					request.open("post", url1);
-					request.send();
-					window.open('#', '_self'); */
-				var wnd = window.open("https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=https://a1droptaxi.com%0AContact No: 8015918900%0AHello "+strText+",%0AThank you for Booking with A1 Drop Taxi.Your "+strText2+" Booking has been Confirmed on "+strText4+".&language=english&route=p&numbers="+strText1);
-					      
-                              if(wnd){
-                                      setTimeout(function () { wnd.close();}, 1800);
-                              }
-            window.open('bc.html', '_blank');
-				}
+			const request = new XMLHttpRequest();
+			const url = 'https://api.telegram.org/bot1641457962:AAGnP9PzlsLOiUDJFhhwG0braXVNiJBBJic/sendMessage?chat_id=-518221023&text='+result;
+			request.open("post", url);
+			request.send();
+			window.open('#', '_self'); 
 
-			});}
             
             /*  var xhttp = new XMLHttpRequest();
          xhttp.open("GET", "https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=https://a1droptaxi.com%0AContact No: 8015918900%0AHello "+strText+",%0AThank you for Booking with A1 Drop Taxi.Your "+strText2+" Booking has been Confirmed on "+strText4+".&language=english&route=p&numbers="+strText1, true);        
