@@ -24,12 +24,12 @@ var sedanr;
 var suvo; 
 var suvr;
 
-// Define calcRoute function
+/* Define calcRoute function
 function calcRoute() {
      var y = document.getElementById("ma");
         y.style.display = "block";
      var z = document.getElementById("ma1");
-        z.style.display = "block";
+        z.style.display = "block";*/
     //create request
     var request = {
         origin: document.getElementById("location-1").value,
