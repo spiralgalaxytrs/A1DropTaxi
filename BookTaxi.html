@@ -104,156 +104,126 @@
                         <div class="regular-search">                        
                             <div class="row">
                                 <div class="clearfix"></div><!-- /.clearfix -->
-                                <div class="col-md-6">
-                                    <label style="color: black;">Pick up location</label>
-                                     <div class="form-group">
-                                        <!--i class="fa fa-clock-o"></i-->
-                                        <input type="text" id="location-1" name="origin" class="form-control"  placeholder="Pickup Location" required> 
-                                    </div><!--/.input-->
-                                </div><!--/.col-md-6-->
-                                <div class="col-md-6">
-                                    <label style="color: black;">Drop location</label>
-                                     <div class="form-group">
-                                        <!--i class="fa fa-calendar"></i-->
-                                        <input type="text" id="location-2" name="destination"  required class="form-control" placeholder="Drop Location">
-                                        </div><!--/.input-->
-                                </div><!--/.col-md-6-->
-                                <div class="clearfix"></div><!-- /.clearfix -->
-                             <div class="col-md-6">
-                                <center>  
-
-                                    <input type="submit" class="btn btn-success" value="Check Price"  onclick="calcRoute();">
-                                </center> 
-
-                                          <br><br>
-                                </div>
-                               <br><br>
-                                <div id="ma" style="display: none;">  
-                                 <b> <div id="output" class="result-table"></div></b>
-                                <div class="container-map" id="google-map"></div> 
+                                           
+            <div class="col-md-4">
+                <label>Pick up location</label>
+                <div class="form-group">
+                    <!--i class="fa fa-clock-o"></i-->
+                    <input type="text" id="location-1" name="origin" class="form-control"  placeholder="Pickup Location" required> 
+                </div><!--/.input-->
+            </div><!--/.col-md-4-->
+            <div class="col-md-4">
+                <label>Drop location</label>
+                <div class="form-group">
+                    <!--i class="fa fa-calendar"></i-->
+                    <input type="text" id="location-2" name="destination"  required class="form-control" placeholder="Drop Location">
+                    </div><!--/.input-->
+            </div><!--/.col-md-4-->
+            <div class="clearfix"></div><!-- /.clearfix -->
+            <div class="col-md-4">
+                
+                
+                   
+                    <center>  
+                        <button class="btn btn-success" type="button" onclick="calcRoute();">Check Price</button>
+                    </center> 
+            
+        
+            <div id="ma" style="display: none;">  
+                <br><br>                              
+                                 
+                <b> <div id="output" class="result-table"></div></b>
+                <div class="container-map" id="google-map"></div> 
 <br><br>
-                               <div class="col-md-6" required>
-                                <div class="service-thumbnail d-flex flex-fill">
-                                <img src="img/sedan.png" alt="#" style="height: 100px; width: 100px; ">
-                                <div id="output1" class="meta-item">
-                            </div>
-                        </div>
-                    </div>
-                                
-                                 <div class="col-md-6">
-                                <div class="service-thumbnail d-flex flex-fill">
-                                <img src="img/suv.png" alt="#" style="height: 100px; width: 100px; ">
-                                <div id="output2" class="meta-item">
-                            </div>
-                        </div>
-                    </div>
+               <div class="col-md-6" required>
+                <div class="service-thumbnail d-flex flex-fill">
+                <img src="https://a1droptaxi.com/img/sedan.png" alt="#" style="height: 100px; width: 100px; ">
+                <div id="output1" class="meta-item">
+            </div>
+        </div>
+    </div>
+                
+                 <div class="col-md-6">
+                <div class="service-thumbnail d-flex flex-fill">
+                <img src="https://a1droptaxi.com/img/suv.png" alt="#" style="height: 100px; width: 100px; ">
+                <div id="output2" class="meta-item">
+            </div>
+        </div>
+    </div>
 
-                                
-            
-                                <div class="col-md-6">
-                                <div class="service-thumbnail d-flex flex-fill">
-                                <img src="img/van.png" alt="#" style="height: 100px; width: 100px; ">
-                                <div id="output3" class="meta-item">
-                            </div>
-                        </div>
-                    </div>
-            
+                
 
+                <div class="col-md-6">
+                <div class="service-thumbnail d-flex flex-fill">
+                <img src="https://a1droptaxi.com/img/van.png" alt="#" style="height: 100px; width: 100px; ">
+                <div id="output3" class="meta-item">
+            </div>
+        </div>
+    </div>
+        </div> 
 
-<br><br>
-                               <div class="col-md-6" required>
-                                <div class="service-thumbnail d-flex flex-fill">
-                                <img src="img/sedan.png" alt="#" style="height: 100px; width: 100px; ">
-@@ -148,7 +148,7 @@ <h3>We've the Best Price!</h3>
-
-                                 <div class="col-md-6">
-                                <div class="service-thumbnail d-flex flex-fill">
-                                <img src="img/sedan.png" alt="#" style="height: 100px; width: 100px; ">
-                                <img src="img/suv.png" alt="#" style="height: 100px; width: 100px; ">
-                                <div id="output2" class="meta-item">
-                            </div>
-                        </div>
-                    </div>
-                                
-
-                                <div class="col-md-6">
-                                <div class="service-thumbnail d-flex flex-fill">
-                                <img src="img/sedan.png" alt="#" style="height: 100px; width: 100px; ">
-                                <img src="img/van.png" alt="#" style="height: 100px; width: 100px; ">
-                                <div id="output3" class="meta-item">
-                            </div>
-                        </div>
-                    </div>
-            
-                               
-                                
-                          </div>     
-                                    <div class="col-md-6">
-                                        <label style="color: black;">Name</label>
-                                         <div class="form-group">
-                                            <!--i class="fa fa-map-marker"></i-->
-                                            <input type="text"  placeholder="Your Name" id="name"  class="form-control">
-                                        </div><!--/.input-->
-                                    </div><!--/.col-md-6-->
-                                    
-                                <div class="col-md-6">
-                                        <label style="color: black;">Phone Number</label>
-                                     <div class="form-group">
-                                            <!--i class="fa fa-calendar"></i-->
-                                            <input type="tel"  placeholder="Phone Number" placeholder="Your Number"id="p" pattern="[6-9]{1}[0-9]{9}" title="Enter Valid Phone Number" class="form-control">          
-                                    </div><!--/.col-md-6-->
-                                </div>
-                                <div class="col-md-6">
-                                    <label style="color: black;">Car Type</label>
-                                     <div class="form-group">
-                                        <select id="cars" name="cars"  class="form-control">
-                                            <option value="Sedan">Sedan</option>
-                                            <option value="SUV">SUV</option>
-                                            <option value="Traveller">Traveller</option>
-                                          </select>
-                                    </div><!--/.input-->
-                                </div>
-                                <div class="col-md-6">
-                                    <label style="color: black;">Service Type</label>
-                                     <div>
-                                        <select id="ser" name="ser"  class="form-control">
-                                            <option value="One-Way">One-Way</option>
-                                            <option value="Round">Round</option>
-                                            
-                                          </select>
-                                    </div><!--/.input-->
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label style="color: black;">Pick up Date</label>
-                                     <div class="form-group">
-                                        <!--i class="fa fa-map-marker"></i-->
-                                        <input type="date"   placeholder="01/01/2020"  id="pickupdate"  class="form-control">
-                                    </div><!--/.input-->
-                                </div><!--/.col-md-6-->
-                                <div class="col-md-6">
-                                    <label style="color: black;">Pick up Time</label>
-                                     <div class="form-group">
-                                        <!--i class="fa fa-map-marker"></i-->
-                                        <input type="time"   placeholder="9:00AM"  id="pickuptime"  class="form-control">
-                                        <!--input type="text" placeholder="Pickup Time" class="time-selector form-controller" placeholder="15:00 am" id="pickuptime"-->
-                                    </div><!--/.input-->
-                                </div>
-                                
-<!--/.col-md-6-->
-                            </div><!-- /.row -->
-                        </div><!-- /.regular-search -->
+                <div class="col-md-4">
+                    <label>Name</label>
+                    <div class="form-group">
+                        <!--i class="fa fa-map-marker"></i-->
+                        <input type="text" placeholder="Your Name" class="form-control" id="name">
+                    </div><!--/.input-->
+                </div><!--/.col-md-4-->
+                
+            <div class="col-md-4">
+                    <label>Phone Number</label>
+                <div class="form-group">
+                        <!--i class="fa fa-calendar"></i-->
+                        <input type="tel" placeholder="Phone Number" class="form-control" placeholder="Your Number"id="p" pattern="[6-9]{1}[0-9]{9}" title="Enter Valid Phone Number">          
+                </div><!--/.col-md-4-->
+            </div>
+            <div class="col-md-4">
+                <label>Car Type</label>
+                <div class="form-group">
+                    <select id="cars" name="cars" class="form-control">
+                        <option value="Sedan">Sedan</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Traveller">Traveller</option>
+                      </select>
+                </div><!--/.input-->
+            </div>
+            <div class="col-md-4">
+                <label>Service Type</label>
+                <div class="form-group">
+                    <select id="ser" name="ser" class="form-control">
+                        <option value="One-Way">One-Way</option>
+                        <option value="Round">Round</option>
                         
-                        <center><div class="col-md-6">
-                            <div class="row" id="ma1" style="display: none;">                            
-                                <!--div class="advanced-search">
-                                    <a href="#" class="advanced-search-btn"><i class="fa fa-search"></i>Advanced search</a>
-                                </div-->
-                                        <input type="submit" class="btn btn-success" value="Find car"  onclick="testVariable()">
-                                        
-                            </div><!-- /.row -->
-                        </div></div></center><!-- /.check-vehiclefas-footer -->
-                    </form><!-- /.advance_search_query -->
+                      </select>
+                </div><!--/.input-->
+            </div>
+            
+            <div class="clearfix"></div><!-- /.clearfix -->
+            <div class="col-md-4">
+                <label>Pick up Date</label>
+                <div class="form-group">
+                    <!--i class="fa fa-map-marker"></i-->
+                    <input type="date" required placeholder="01/01/2020"  id="pickupdate" class="form-control">
+                </div><!--/.input-->
+            </div><!--/.col-md-4-->
+            <div class="col-md-4">
+                <label>Pick up Time</label>
+                <div class="form-group">
+                    <!--i class="fa fa-map-marker"></i-->
+                    <input type="time" required placeholder="9:00AM"  id="pickuptime" class="form-control">
+                </div><!--/.input-->
+            </div>
+
+    <center>  
+        <input type="submit" class="btn btn-success" id="ma1"  value="Find car"  onclick="testVariable()">
+    </center> 
+
+<!--/.col-md-4-->
+       <!-- /.row -->
+    </div><!-- /.regular-search -->
+
+<!-- /.check-vehicle-footer -->
+</form><!-- /.advance_search_query -->
                 </div>
             </div>
         </div>
