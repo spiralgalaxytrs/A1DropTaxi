@@ -126,7 +126,7 @@
                                 <div class="clearfix"></div><!-- /.clearfix -->
                              <div class="col-md-6">
                                 <center>  
-                                    <input type="submit" class="btn btn-success" value="Check Price"  onclick="calcRoute();">
+                                    <input type="submit" class="btn btn-success" id="clickButton" value="Check Price"  onclick="calcRoute();">
                                 </center> 
                                           <br><br>
                                 </div>
@@ -255,7 +255,10 @@
   document.getElementById("location-2").value = res1.substring(res1.indexOf("on=")+3,res1.length);
 </script>
 <script>
-
+window.onload = function(){
+    var button = document.getElementById('clickButton');
+    button.form.submit();
+}
 </script>
 
 
@@ -272,3 +275,4 @@
 
 </body>
 </html>
+//a
