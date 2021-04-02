@@ -102,3 +102,4 @@ var autocomplete1 = new google.maps.places.Autocomplete(input1);
 
 var input2 = document.getElementById("location-2");
 var autocomplete2 = new google.maps.places.Autocomplete(input2);
+//
