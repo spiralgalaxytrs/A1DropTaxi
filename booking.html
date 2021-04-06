@@ -149,33 +149,136 @@
         </div>
     </section>
     <!--//End News -->
-    <section class="about-section" style="background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);">
+      <!--//End News -->
+    <!--==================== Appointment ====================-->
+    <section class="space background-bg4">
         <div class="container container-custom">
             <div class="row">
-                <div class="col-md-12">
-                    <!-- booking form -->
-                    <form action="BookTaxi.html" method="GET">
-                    <ul class="booking-form">
-                        <li><input type="text" class="form-control" name="origin" id="location-1" placeholder="Pickup Location" required/><i
-                                class="fas fa-map-marker-alt"></i></li>
-                        <li><input type="text" class="form-control" id="location-2" name="destination" placeholder="Drop Location" required/><i
-                                class="fas fa-map-marker-alt"></i></li>
-                        <!--li>
-                            <select class="custom-select form-control">
-                                <option selected>Select a Service</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </li-->
-                        <li class="form-btn">
-                            <input type="submit" onclick="calcRoute();" class="btn btn-success" value="Book Now">
-                        </li>
-                    </ul>
+                <div class="col-md-12 col-lg-6">
+                    <img src="images/contact-form-bg.png" class="img-fluid get-in-bg" alt="#">
+                        <div class="heading-style1">
+                            <h3>We've the Best Price!</h3>
+                        </div>
+                        
+                        <form action="#" class="advance-search-query input-night-rider yellow-theme"  id="bookingForm" >
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Pick up location</label>
+                                    <div class="form-group form-group-cutom">
+                                        <input type="text" id="location-1" name="origin" class="form-control"  placeholder="Pickup Location" required> 
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Drop location</label>
+                                    <div class="form-group form-group-cutom">
+                                        <input type="text" id="location-2" name="destination"  required class="form-control" placeholder="Drop Location">
+
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div><!-- /.clearfix -->
+            <div class="col-md-4">
+                
+                
+                   
+                    <center>  
+                        <button class="btn btn-success" type="button" onclick="calcRoute();">Check Price</button>
+                    </center> 
+            
+        
+            <div id="ma" style="display: none;">  
+                <br><br>                              
+                                 
+                <b> <div id="output" class="result-table"></div></b>
+                <div class="container-map" id="google-map"></div> 
+<br><br>
+               <div class="col-md-6" required>
+                <div class="service-thumbnail d-flex flex-fill">
+                <img src="https://a1droptaxi.com/img/sedan.png" alt="#" style="height: 100px; width: 100px; ">
+                <div id="output1" class="meta-item">
+            </div>
+        </div>
+    </div>
+                
+                 <div class="col-md-6">
+                <div class="service-thumbnail d-flex flex-fill">
+                <img src="https://a1droptaxi.com/img/suv.png" alt="#" style="height: 100px; width: 100px; ">
+                <div id="output2" class="meta-item">
+            </div>
+        </div>
+    </div>
+
+                
+
+                <div class="col-md-6">
+                <div class="service-thumbnail d-flex flex-fill">
+                <img src="https://a1droptaxi.com/img/van.png" alt="#" style="height: 100px; width: 100px; ">
+                <div id="output3" class="meta-item">
+            </div>
+        </div>
+    </div>
+        </div> 
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Name</label>
+                                    <div class="form-group form-group-cutom">
+                                        <input type="text" placeholder="Your Name" class="form-control" required id="name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Phone Number</label>
+                                    <div class="form-group form-group-cutom">
+                                        <input type="tel" placeholder="Phone Number" class="form-control" placeholder="Your Number"id="p" pattern="[6-9]{1}[0-9]{9}" title="Enter Valid Phone Number" required>      
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Car Type</label>
+                                    <div class="form-group form-group-cutom">
+                                        <select id="cars" name="cars" class="form-control" required>
+                                            <option value="Sedan">Sedan</option>
+                                            <option value="SUV">SUV</option>
+                                            <option value="Traveller">Traveller</option>
+                                          </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Service Type</label>
+                                    <div class="form-group form-group-cutom">
+                                        <select id="ser" name="ser" class="form-control" required>
+                                            <option value="One-Way">One-Way</option>
+                                            <option value="Round">Round</option>
+                                            
+                                          </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                                <div class="col-md-6">
+                                    <label>Pick up Date</label>
+                                    <div class="form-group form-group-cutom">
+                                        <input type="date" required placeholder="01/01/2020"  id="pickupdate" class="form-control" required>
+                                       
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Pick up Time</label>
+                                    <div class="form-group form-group-cutom">
+                                        
+                                        <input type="time" required placeholder="9:00AM"  id="pickuptime" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-success" id="ma1"  value="Find car"  onclick="testVariable()">
+                                </div>
+                            </div>
                         </form>
-                    <div class="container-map" id="google-map"></div> 
-                    <!--//End booking form -->
+                    </div>
                 </div>
+               
             </div>
         </div>
     </section>
