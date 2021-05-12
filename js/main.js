@@ -4,6 +4,10 @@ var mapOptions = {
     zoom: 1,
     mapTypeId: google.maps.MapTypeId.ROADMAP
 };
+
+// Hide result box
+//document.getElementById("output").style.display = "none";
+document.getElementById("output1").style.display = "block";
 // Create/Init map
 var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
 
@@ -15,10 +19,16 @@ var directionsDisplay = new google.maps.DirectionsRenderer();
 
 // Bind the DirectionsRenderer to the map
 directionsDisplay.setMap(map);
-
+var sedano;
+var sedanr;
+var suvo; 
+var suvr;
 
 // Define calcRoute function
 function calcRoute() {
+     var y = document.getElementById("ma");
+        y.style.display = "block";
+
     //create request
     var request = {
         origin: document.getElementById("location-1").value,
@@ -32,7 +42,7 @@ function calcRoute() {
         if (status == google.maps.DirectionsStatus.OK) {
 
             //Get distance and time            
-                       var d=result.routes[0].legs[0].distance.value/1000;
+            var d=result.routes[0].legs[0].distance.value/1000;
             var n = d.toFixed(0);
             sedano=((n*12)+350)+" - "+((n*12)+500);
             sedanr=2*((n*12)+350)+" - "+2*((n*12)+500);
@@ -50,9 +60,10 @@ function calcRoute() {
             document.getElementById("output1").style.display = "block";
             //display route <span> Price  :  ₹13 / Km.</span>
             directionsDisplay.setDirections(result);
+            
 
-            //display route
-            directionsDisplay.setDirections(result);
+
+
         } else {
             //delete route from map
             directionsDisplay.setDirections({ routes: [] });
@@ -81,12 +92,12 @@ function clearRoute(){
 // Create autocomplete objects for all inputs
 
 var options = {
-    types: ['(cities)']
+    componentRestrictions: { country: "ind" }
 }
 
 
 var input1 = document.getElementById("location-1");
-var autocomplete1 = new google.maps.places.Autocomplete(input1, options);
+var autocomplete1 = new google.maps.places.Autocomplete(input1, options); 
 
 var input2 = document.getElementById("location-2");
 var autocomplete2 = new google.maps.places.Autocomplete(input2, options);
