@@ -48,7 +48,7 @@ function calcRoute() {
             sedanr=2*((n*11)+175)+" - "+2*((n*11)+250);
             suvo=((n*18)+350)+" - "+((n*18)+500);
             suvr=2*((n*14)+175)+" - "+2*((n*14)+250);
-            traveller=(2*((n*18)+350))+" - "+(2*((n*18)+500));
+            traveller=(2*((n*18)+175))+" - "+(2*((n*18)+250));
            
           //  $("#output").html("<div class='result-table'> Driving distance: " + result.routes[0].legs[0].distance.text + ".<br />SUV Rate: ₹" +((n)*12)+"-"+((n)*15)+".<br />Sedan Rate: ₹" +((n)*8)+"-"+((n)*11)+".<br />Hatchback Rate: ₹" +((n)*16)+"-"+((n)*19)+ ".<br />Duration: " + result.routes[0].legs[0].duration.text + ".</div>");
             //document.getElementById("output").style.display = "block";
